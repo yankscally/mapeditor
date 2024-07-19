@@ -1,5 +1,7 @@
 import bpy
 
+# for the level / map organisation
+
 class MapPanel(bpy.types.Panel):
     bl_label = "Map"
     bl_idname = "VIEW3D_PT_map_panel"
@@ -18,7 +20,6 @@ class MapPanel(bpy.types.Panel):
         row = layout.row()
         row.operator("map.add_layer")
         row = layout.row()
-        row.prop(scene.my_properties, "my_enum")
 
 
 class AddMap(bpy.types.Operator):
