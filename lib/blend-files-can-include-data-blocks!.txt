@@ -1,0 +1,5 @@
+for example, I included custom workspaces in workspace.blend which can be opened in another file.
+
+this is how you would include geonodes to an addon, so keep this here for the future! 
+
+-ys
