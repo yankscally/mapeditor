@@ -1,4 +1,9 @@
-# mapeditor
+# blender2godot
+
+TEMPORARY REPO, WILL BE MOVED TO AN OFFICIAL ACCOUNT WHEN WE HAVE A NAME
+...
+
+
 
 blender 2 godot addon
 
