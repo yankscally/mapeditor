@@ -104,14 +104,6 @@ def unregister_class_queue():
 
 
 
-def register():
-    register_class_queue()
-    register_properties()
-
-def unregister():
-    unregister_class_queue()
-    unregister_properties
-
 
 
 
@@ -124,7 +116,7 @@ def unregister():
 # (you will need a panel_template.py in the same dir as a module, that includes a MyProps class)
 
 
-# inside panel_template.py:
+# inside /panel_template.py:
 
 # class MyProps(bpy.types.PropertyGroup):
 #     my_string : bpy.props.StringProperty(
@@ -140,13 +132,21 @@ from . import grid_size
 def register_properties():
     # example:
     # bpy.types.Scene.my_prop = bpy.props.PointerProperty(type=panel_template.MyProps)
-
-    bpy.types.Scene.object_properties = bpy.props.PointerProperty(type=grid_size.unit_size)
+    bpy.types.Scene.object_properties = bpy.props.PointerProperty(type=object_properties.GameEngineProperties)
     bpy.types.Scene.grid_size = bpy.props.PointerProperty(type=grid_size.unit_size)
     pass
 
 def unregister_properties():
     # example:
     # del bpy.types.Scene.my_prop
-
     del bpy.types.Scene.object_properties
+    del bpy.types.Scene.grid_size
+# ok! lets go!
+
+def register():
+    register_class_queue()
+    register_properties()
+
+def unregister():
+    unregister_class_queue()
+    unregister_properties()

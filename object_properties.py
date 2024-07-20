@@ -24,8 +24,7 @@ class GameEngineProperties(bpy.types.PropertyGroup):
             ("1", "None", ""),
             ("2", "Convex", ""),
             ("3", "Concave", ""),
-            ("4", "AABB Box", ""),
-            ("5", "Shape", ""),
+            ("4", "Shape", ""),
                ],
         default="1") #type: ignore
 
